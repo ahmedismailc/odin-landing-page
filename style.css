@@ -1,194 +1,203 @@
 :root {
-  --dark-bgc: #1f2937;
-  --white-main: #f9faf8;
-  --white-secondary: #e5e7eb;
-  --button-color: #3882f6;
+  --dark: #1f2937;
+  --white: #f9faf8;
+  --white-s: #e5e7eb;
+  --blue: #3882f6;
+}
+
+body,
+h1,
+h2,
+h3,
+ul,
+p {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
   font-family: "Roboto", sans-serif;
   font-size: 18px;
-  margin: 0;
-}
-
-.section-one {
   display: flex;
   flex-direction: column;
-  background-color: #1f2937;
 }
 
+/* ///////// Header Section \\\\\\\\\ */
+.header-section {
+  background-color: var(--dark);
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+  padding: 20px 12.5% 130px 12.5%;
+}
+
+/* /// Header \\\ */
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 20px 0;
 }
 
 .header-logo {
-  color: #f9faf8;
+  color: var(--white);
   font-size: 24px;
   font-weight: bold;
 }
 
 .header-links {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  font-size: 18px;
-  color: #e5e7eb;
   list-style: none;
+  display: flex;
   gap: 24px;
 }
 
-.header-links li a {
+.header-links a {
   text-decoration: none;
-  color: #e5e7eb;
+  color: var(--white-s);
+  font-size: 18px;
 }
+/* === Header === */
 
+/* /// Hero \\\ */
 .hero {
   display: flex;
   justify-content: space-between;
-  margin-top: 120px;
-  margin-bottom: 130px;
 }
 
 .left-hero {
   width: 40%;
-}
-.image-placeholder {
-  width: 50%;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.35);
-  color: white;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .hero-main-text {
+  color: var(--white);
   font-size: 48px;
   font-weight: bold;
-  color: #f9faf8;
-  margin: 0;
-  padding: 0;
 }
 
 .hero-secondary-text {
-  font-size: 18px;
-  color: #e5e7eb;
-  margin-top: 0;
+  color: var(--white-s);
   margin-bottom: 10px;
-  padding: 0;
 }
 
 .button {
-  background-color: #3882f6;
-  /* width: 125px;
-  height: 35px; */
+  border: none;
+  cursor: pointer;
+  background-color: var(--blue);
+  flex-shrink: 0;
   padding: 8px 34px;
-  display: inline-block;
   border-radius: 10px;
   color: white;
-  font-weight: 600;
+  font-weight: bold;
   font-size: 18px;
 }
 
-.section-two {
+/* ------------- */
+.right-hero {
+  width: 50%;
+  display: flex;
+}
+
+.image-placeholder {
+  flex: 1;
+  background-color: rgba(255, 255, 255, 0.35);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* === Hero === */
+/* ========== Header Section ========= */
+
+/* ////////// Info Section \\\\\\\\\\ */
+.info-section {
+  color: var(--dark);
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #1f2937;
-  margin-top: 55px;
-  margin-bottom: 125px;
+  gap: 55px;
+  padding: 55px 0 125px 0;
 }
 
-.section-two h2 {
+.info-title {
   font-size: 36px;
-  margin: 0;
-  margin-bottom: 55px;
-  font-weight: bolder;
 }
 
-.cards {
-  display: flex;
+.info-cards {
   width: 60%;
+  display: flex;
+  justify-content: center;
   gap: 46px;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 160px;
 }
 
 .img-container {
-  border: 4px solid #3882f6;
+  border: 4px solid var(--blue);
   height: 160px;
-
   border-radius: 16px;
+  margin-bottom: 12px;
 }
+/* ========== Info Section ========= */
 
-.card p {
-  margin: 0;
-  margin-top: 12px;
-}
-
-.section-three-quote {
-  background-color: #e5e7eb;
+/* ////////// Quote Section \\\\\\\\\\ */
+.quote-section {
+  background-color: var(--white-s);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 130px 300px 110px;
+  color: var(--dark);
 }
 
-.section-three-quote q {
-  color: #1f2937;
+.quote-section q {
   font-size: 36px;
   font-style: italic;
-  font-weight: 100;
 }
 
-.section-three-quote p {
-  color: #1f2937;
+.quote-section p {
   font-size: 24px;
   font-weight: bold;
   margin: 16px;
   margin-left: auto;
 }
+/* ========== Quote Section ========= */
+
+/* ////////// Sign-up Section \\\\\\\\\\ */
+.sign-up-section {
+  display: flex;
+  justify-content: center;
+  padding: 100px 0;
+}
 
 .sign-up-card {
-  background-color: #3882f6;
+  flex: 0.7;
+  background-color: var(--blue);
+  color: white;
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 50px 0px;
-  margin: 100px 0;
-  margin-left: auto;
-  margin-right: auto;
-  width: 75%;
-}
-
-.sign-up-card .left * {
-  margin: 0;
-  padding: 0;
-  margin-left: 120px;
+  padding: 50px 120px;
 }
 
 .sign-up-card .button {
   border: 2px solid white;
-  margin-right: 120px;
 }
+/* ========== Sign-up Section ========= */
 
+/* ////////// Footer Section \\\\\\\\\\ */
 .footer {
-  background-color: #1f2937;
+  background-color: var(--dark);
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px 0;
+  padding: 40px;
 }
-
-/* ----------------------- */
-.header,
-.hero {
-  margin-left: auto;
-  margin-right: auto;
-  width: 75%;
-}
+/* ========== Footer Section ========= */
